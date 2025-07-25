@@ -285,6 +285,7 @@
 			<Catalog>ОбъектыТестирования</Catalog>
 			<Catalog>Разделы</Catalog>
 			<Catalog>Вопросы</Catalog>
+			<Catalog>Справочник1</Catalog>
 			<Report>РаспечаткаТестов</Report>
 			<DataProcessor>Тестирование1СПрофессионал</DataProcessor>
 			<DataProcessor>УниверсальныеПодборИОбработкаОбъектов</DataProcessor>
