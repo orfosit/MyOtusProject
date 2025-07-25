@@ -286,6 +286,7 @@
 			<Catalog>Разделы</Catalog>
 			<Catalog>Вопросы</Catalog>
 			<Catalog>Справочник1</Catalog>
+			<Document>Документ1</Document>
 			<Report>РаспечаткаТестов</Report>
 			<DataProcessor>Тестирование1СПрофессионал</DataProcessor>
 			<DataProcessor>УниверсальныеПодборИОбработкаОбъектов</DataProcessor>
