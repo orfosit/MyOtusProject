@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Печать тестов</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>false</ShowCommandBar>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<ViewModeApplicationOnSetReportResult>Auto</ViewModeApplicationOnSetReportResult>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаУстановитьФлажки" id="40">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.Разделы.StandardCommand.CheckAll</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьФлажкиРасширеннаяПодсказка" id="41"/>
+			</Button>
+			<Button name="ФормаСнятьФлажки" id="42">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.Разделы.StandardCommand.UncheckAll</CommandName>
+				<ExtendedTooltip name="ФормаСнятьФлажкиРасширеннаяПодсказка" id="43"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Период" id="16">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<InputField name="НачалоПериода" id="1">
+					<DataPath>Отчет.НачалоПериода</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<Width>16</Width>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="21"/>
+					<SelectedItemsActionsPanel name="НачалоПериодаПанельДействийВыделенныхСтрок" id="44"/>
+				</InputField>
+				<InputField name="КонецПериода" id="3">
+					<DataPath>Отчет.КонецПериода</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="КонецПериодаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="КонецПериодаРасширеннаяПодсказка" id="22"/>
+					<SelectedItemsActionsPanel name="КонецПериодаПанельДействийВыделенныхСтрок" id="45"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ОбъектТестирования" id="5">
+			<DataPath>Отчет.ОбъектТестирования</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сертификат</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<ContextMenu name="ОбъектТестированияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОбъектТестированияРасширеннаяПодсказка" id="23"/>
+			<SelectedItemsActionsPanel name="ОбъектТестированияПанельДействийВыделенныхСтрок" id="46"/>
+			<Events>
+				<Event name="OnChange">ОбъектТестированияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="Разделы" id="7">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<Header>false</Header>
+			<HorizontalLinesBWA>false</HorizontalLinesBWA>
+			<VerticalLinesBWA>false</VerticalLinesBWA>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Отчет.Разделы</DataPath>
+			<RowPictureDataPath>Отчет.Разделы.Picture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="РазделыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="РазделыКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="РазделыУстановитьФлажки" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Разделы.StandardCommand.CheckAll</CommandName>
+						<ExtendedTooltip name="РазделыУстановитьФлажкиРасширеннаяПодсказка" id="24"/>
+					</Button>
+					<Button name="РазделыСнятьФлажки" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Разделы.StandardCommand.UncheckAll</CommandName>
+						<ExtendedTooltip name="РазделыСнятьФлажкиРасширеннаяПодсказка" id="25"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РазделыРасширеннаяПодсказка" id="26"/>
+			<SearchStringAddition name="РазделыСтрокаПоиска" id="27">
+				<AdditionSource>
+					<Item>Разделы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РазделыСтрокаПоискаКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="РазделыСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РазделыСостояниеПросмотра" id="30">
+				<AdditionSource>
+					<Item>Разделы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РазделыСостояниеПросмотраКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="РазделыСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РазделыУправлениеПоиском" id="33">
+				<AdditionSource>
+					<Item>Разделы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РазделыУправлениеПоискомКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="РазделыУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+			</SearchControlAddition>
+			<SelectedItemsActionsPanel name="РазделыПанельДействийВыделенныхСтрок" id="47"/>
+			<ChildItems>
+				<CheckBoxField name="РазделыПометка" id="12">
+					<DataPath>Отчет.Разделы.Check</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазделыПометкаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="РазделыПометкаРасширеннаяПодсказка" id="36"/>
+					<SelectedItemsActionsPanel name="РазделыПометкаПанельДействийВыделенныхСтрок" id="48"/>
+				</CheckBoxField>
+				<InputField name="РазделыЗначение" id="10">
+					<DataPath>Отчет.Разделы.Value</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="РазделыЗначениеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="РазделыЗначениеРасширеннаяПодсказка" id="37"/>
+					<SelectedItemsActionsPanel name="РазделыЗначениеПанельДействийВыделенныхСтрок" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<RadioButtonField name="ВыводПравильныхОтветов" id="14">
+			<DataPath>Отчет.ВыводПравильныхОтветов</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывод ответов</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Top</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>не выводить правильные ответы</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>выводить все ответы, отмечая правильные</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>выводить только правильные ответы</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">3</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВыводПравильныхОтветовКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ВыводПравильныхОтветовРасширеннаяПодсказка" id="38"/>
+			<SelectedItemsActionsPanel name="ВыводПравильныхОтветовПанельДействийВыделенныхСтрок" id="51"/>
+		</RadioButtonField>
+		<Button name="Выполнить" id="19">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Выполнить</CommandName>
+			<ExtendedTooltip name="ВыполнитьРасширеннаяПодсказка" id="39"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.РаспечаткаТестов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сформировать</Action>
+		</Command>
+	</Commands>
+</Form>
