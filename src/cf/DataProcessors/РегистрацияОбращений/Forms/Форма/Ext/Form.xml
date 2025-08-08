@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<Page name="Группа1" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарегистрировать обращение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="Тема" id="1">
+							<DataPath>Тема</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тема</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТемаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Типобращения" id="64">
+							<DataPath>Типобращения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип обращения</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТипобращенияКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ТипобращенияРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="Приоритет" id="61">
+							<DataPath>Приоритет</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПриоритетКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<TextDocumentField name="ОписаниеОбращения" id="4">
+							<DataPath>ОписаниеОбращения</DataPath>
+							<ContextMenu name="ОписаниеОбращенияКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ОписаниеОбращенияРасширеннаяПодсказка" id="6"/>
+						</TextDocumentField>
+						<InputField name="СистемаУчета" id="7">
+							<DataPath>СистемаУчета</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СистемаУчетаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СистемаУчетаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<Button name="Зарегистрировать" id="10">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Зарегистрировать</CommandName>
+							<ExtendedTooltip name="ЗарегистрироватьРасширеннаяПодсказка" id="11"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="МоиОбращения" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мои обращения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мои обращения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="МоиОбращенияРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<Table name="Обращения" id="16">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Обращения</DataPath>
+							<RowPictureDataPath>Обращения.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ОбращенияКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ОбращенияКоманднаяПанель" id="18">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОбращенияРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ОбращенияСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>Обращения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбращенияСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ОбращенияСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбращенияСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>Обращения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбращенияСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ОбращенияСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбращенияУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>Обращения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбращенияУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ОбращенияУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбращенияДата" id="29">
+									<DataPath>Обращения.Date</DataPath>
+									<ContextMenu name="ОбращенияДатаКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ОбращенияДатаРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<LabelField name="ОбращенияНомер" id="32">
+									<DataPath>Обращения.Number</DataPath>
+									<ContextMenu name="ОбращенияНомерКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ОбращенияНомерРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<LabelField name="ОбращенияОрганизация" id="35">
+									<DataPath>Обращения.Организация</DataPath>
+									<ContextMenu name="ОбращенияОрганизацияКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ОбращенияОрганизацияРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+								<LabelField name="ОбращенияКлиент" id="38">
+									<DataPath>Обращения.Клиент</DataPath>
+									<ContextMenu name="ОбращенияКлиентКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ОбращенияКлиентРасширеннаяПодсказка" id="40"/>
+								</LabelField>
+								<LabelField name="ОбращенияКонтактноеЛицоОтЗаказчика" id="41">
+									<DataPath>Обращения.КонтактноеЛицоОтЗаказчика</DataPath>
+									<ContextMenu name="ОбращенияКонтактноеЛицоОтЗаказчикаКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ОбращенияКонтактноеЛицоОтЗаказчикаРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<LabelField name="ОбращенияТемаОбращения" id="44">
+									<DataPath>Обращения.ТемаОбращения</DataPath>
+									<ContextMenu name="ОбращенияТемаОбращенияКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ОбращенияТемаОбращенияРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<LabelField name="ОбращенияОписаниеОбращения" id="47">
+									<DataPath>Обращения.ОписаниеОбращения</DataPath>
+									<ContextMenu name="ОбращенияОписаниеОбращенияКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ОбращенияОписаниеОбращенияРасширеннаяПодсказка" id="49"/>
+								</LabelField>
+								<LabelField name="ОбращенияПриоритет" id="50">
+									<DataPath>Обращения.Приоритет</DataPath>
+									<ContextMenu name="ОбращенияПриоритетКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ОбращенияПриоритетРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<LabelField name="ОбращенияСостояниеОбращения" id="53">
+									<DataPath>Обращения.СостояниеОбращения</DataPath>
+									<ContextMenu name="ОбращенияСостояниеОбращенияКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ОбращенияСостояниеОбращенияРасширеннаяПодсказка" id="55"/>
+								</LabelField>
+								<LabelField name="ОбращенияОтветственный" id="56">
+									<DataPath>Обращения.Ответственный</DataPath>
+									<ContextMenu name="ОбращенияОтветственныйКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ОбращенияОтветственныйРасширеннаяПодсказка" id="58"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РегистрацияОбращений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Тема" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Т</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеОбращения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание обращения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СистемаУчета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Система учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СистемыУчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Обращения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обращения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.Обращение</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Приоритет" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ПриоритетОбращения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Типобращения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типобращения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипОбращения</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Зарегистрировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Зарегистрировать</Action>
+		</Command>
+	</Commands>
+</Form>

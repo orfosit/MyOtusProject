@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Сотрудник" id="47">
+			<DataPath>Объект.Сотрудник</DataPath>
+			<SkipOnInput>false</SkipOnInput>
+			<DropListButton>false</DropListButton>
+			<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="49"/>
+			<Events>
+				<Event name="OnChange">СотрудникПриИзменении</Event>
+				<Event name="StartChoice">СотрудникНачалоВыбора</Event>
+				<Event name="StartListChoice">СотрудникНачалоВыбораИзСписка</Event>
+			</Events>
+		</InputField>
+		<InputField name="КартаЗнаний" id="1">
+			<DataPath>Объект.КартаЗнаний</DataPath>
+			<SkipOnInput>false</SkipOnInput>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КартаЗнанийКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КартаЗнанийРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">КартаЗнанийПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Button name="НачатьТестирование" id="52">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НачатьТестирование</CommandName>
+			<ExtendedTooltip name="НачатьТестированиеРасширеннаяПодсказка" id="53"/>
+		</Button>
+		<Table name="НаборТестов" id="4">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.НаборТестов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборТестовКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="НаборТестовКоманднаяПанель" id="6">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НаборТестовРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="НаборТестовСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>НаборТестов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборТестовСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="НаборТестовСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборТестовСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>НаборТестов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборТестовСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="НаборТестовСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборТестовУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>НаборТестов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборТестовУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="НаборТестовУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НаборТестовНомерСтроки" id="17">
+					<DataPath>Объект.НаборТестов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборТестовНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НаборТестовНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="НаборТестовТест" id="20">
+					<DataPath>Объект.НаборТестов.Вопрос</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НаборТестовТестКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НаборТестовТестРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ВариантыОтветов" id="23">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ВариантыОтветов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВариантыОтветовКонтекстноеМеню" id="24"/>
+			<AutoCommandBar name="ВариантыОтветовКоманднаяПанель" id="25">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ВариантыОтветовРасширеннаяПодсказка" id="26"/>
+			<SearchStringAddition name="ВариантыОтветовСтрокаПоиска" id="27">
+				<AdditionSource>
+					<Item>ВариантыОтветов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветовСтрокаПоискаКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ВариантыОтветовСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВариантыОтветовСостояниеПросмотра" id="30">
+				<AdditionSource>
+					<Item>ВариантыОтветов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветовСостояниеПросмотраКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ВариантыОтветовСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВариантыОтветовУправлениеПоиском" id="33">
+				<AdditionSource>
+					<Item>ВариантыОтветов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВариантыОтветовУправлениеПоискомКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ВариантыОтветовУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВариантыОтветовНомерСтроки" id="36">
+					<DataPath>Объект.ВариантыОтветов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВариантыОтветовНомерСтрокиКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ВариантыОтветовНомерСтрокиРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+				<InputField name="ВариантыОтветовВариантОтвета" id="39">
+					<DataPath>Объект.ВариантыОтветов.ВариантОтвета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВариантыОтветовВариантОтветаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ВариантыОтветовВариантОтветаРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<CheckBoxField name="ВариантыОтветовОтвет" id="44">
+					<DataPath>Объект.ВариантыОтветов.Ответ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВариантыОтветовОтветКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ВариантыОтветовОтветРасширеннаяПодсказка" id="46"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<Button name="СледующийВопрос" id="42">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СледующийВопрос</CommandName>
+			<ExtendedTooltip name="СледующийВопросРасширеннаяПодсказка" id="43"/>
+		</Button>
+		<Button name="ЗавершитьТестирование" id="50">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗавершитьТестирование</CommandName>
+			<ExtendedTooltip name="ЗавершитьТестированиеРасширеннаяПодсказка" id="51"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Тестирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КодПропуститьВопрос" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код пропустить вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Вопрос" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Вопросы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПравильныйВариантОтвета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правильный вариант ответа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СледующийВопрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий вопрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующий вопрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СледующийВопрос</Action>
+		</Command>
+		<Command name="ЗавершитьТестирование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить тестирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить тестирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьТестирование</Action>
+		</Command>
+		<Command name="НачатьТестирование" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать тестирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать тестирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НачатьТестирование</Action>
+		</Command>
+	</Commands>
+</Form>

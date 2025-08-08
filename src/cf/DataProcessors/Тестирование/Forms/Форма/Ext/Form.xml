@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="28">
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="Сотрудник" id="1">
+					<DataPath>Объект.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<QuickChoice>false</QuickChoice>
+					<ContextMenu name="СотрудникКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">СотрудникПриИзменении</Event>
+						<Event name="StartChoice">СотрудникНачалоВыбора</Event>
+						<Event name="StartListChoice">СотрудникНачалоВыбораИзСписка</Event>
+					</Events>
+				</InputField>
+				<Button name="ВыбратьСотрудника" id="26">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.ВыбратьСотрудника</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.InputFieldSelect</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВыбратьСотрудникаРасширеннаяПодсказка" id="27"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КартаЗнаний" id="4">
+			<DataPath>Объект.КартаЗнаний</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КартаЗнанийКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КартаЗнанийРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="НаборТестов" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.НаборТестов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборТестовКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="НаборТестовКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="НаборТестовРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="НаборТестовСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>НаборТестов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборТестовСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="НаборТестовСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборТестовСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>НаборТестов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборТестовСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="НаборТестовСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборТестовУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>НаборТестов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборТестовУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="НаборТестовУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НаборТестовНомерСтроки" id="20">
+					<DataPath>Объект.НаборТестов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаборТестовНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НаборТестовНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="НаборТестовТест" id="23">
+					<DataPath>Объект.НаборТестов.Вопрос</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НаборТестовТестКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НаборТестовТестРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Тестирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьСотрудника" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать сотрудника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьСотрудника</Action>
+		</Command>
+	</Commands>
+</Form>
